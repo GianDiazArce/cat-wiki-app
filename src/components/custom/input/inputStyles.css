@@ -1,0 +1,33 @@
+
+.input__container {
+    display: flex;
+    align-items: center;
+    border-radius: 59px;
+    background-color: #fff;
+    padding: 5px 20px;
+    height: 50px;
+    position: relative;
+}
+
+
+.input__container > input { 
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #291507;
+    font-weight: 500;
+ }
+
+ 
+
+.input__container > span {
+     color: #000000;
+     border-radius: 50%;
+     padding: 2px;
+     cursor: pointer;
+     transition: background-color .5;
+}
+
+.input__container > span:hover {
+    background-color: rgba(0, 0, 0, .1);
+}

@@ -1,0 +1,79 @@
+.breedTop__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+.breedTop__title {
+    font-size: 36px;
+}
+
+.breedTop__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.breedTop__card {
+    display: flex;
+    padding: 10px 0;
+    gap: 2em;
+}
+
+.breedTop__figure{
+    max-width: 190px;
+    max-height: 190px;
+    min-width: 170px;
+    min-height: 170px;
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.breedTop__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+.breedTop__figure:hover > .breedTop__img {
+    transform: scale(1.1);
+}
+
+.breedTop__texts {
+    display: flex;
+    flex-direction: column;
+    color: #291507;
+    gap: 1em;
+}
+
+.breedTop__texts a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.breedTop__texts a:hover {
+    opacity: .8;
+}
+
+.breedTop__name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 560px) {
+    .breedTop__card {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .breedTop__figure {
+        min-width: 100%;
+        min-height: none;
+        max-height: 300px;
+    }
+    .breedTop__texts {
+        order: -1;
+    }
+}

@@ -1,0 +1,114 @@
+.header {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+.header__card {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 450px;
+}
+
+.header__card1 {
+    background-image: url('/public/assets/images/HeroImagelg.png');
+    background-position: bottom;
+    background-size: cover;
+    color: #ffffff;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+
+
+.header__texts {
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1.5em;
+}
+
+.header__texts>p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 1em;
+}
+
+.header__card2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2.875em;
+    background-color: #E3E1DC;
+
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+
+    color: #291507;
+
+}
+
+
+.header__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header__title>h1 {
+    max-width: 530px;
+}
+
+.header__title>span {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #29150799;
+
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    letter-spacing: .4px;
+    cursor: pointer;
+}
+
+.subtitle {
+    font-weight: 500;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-auto-flow: row;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .header__card1 {
+        background-image: url('/public/assets/images/HeroImagemd.png');
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5em;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header__card1 {
+        background-image: url('/public/assets/images/HeroImagesm.png');
+    }
+
+    .cards {
+        gap: 0;
+    }
+
+    .header__title>span {
+        display: none;
+    }
+}
