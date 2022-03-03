@@ -41,12 +41,12 @@ export const HeaderComponent = () => {
                 let cboBreedsOpts: cboOption[] = [];
                 resp.data.breeds.map((breed) => {
                     cboBreedsOpts.push({ id: breed.id, label: breed.name });
+                    return breed;
                 });
                 setBreedOptions(cboBreedsOpts);
             })
             .catch(console.log);
     }, []);
-
     const handleSearch = () => {
         if (breedSelected.label.length > 1) {
             navigate(`/breed/${breedSelected.label.toLowerCase()}`);

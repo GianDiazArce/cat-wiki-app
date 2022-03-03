@@ -18,7 +18,7 @@ export const TopBreedPage = () => {
                 setIsLoading(false);
             })
             .catch(console.log);
-    }, []);
+    }, [setIsLoading]);
 
     if (isLoading === true || breeds.length < 0) {
         return (

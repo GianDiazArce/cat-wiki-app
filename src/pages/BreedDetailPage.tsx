@@ -35,6 +35,8 @@ export const BreedDetailPage = () => {
                         )
                         .then((resp) => {
                             setImages(resp.data.images);
+                            
+                            // eslint-disable-next-line
                             setIsLoading(false);
                         });
                 },
@@ -42,7 +44,7 @@ export const BreedDetailPage = () => {
                     console.log(err);
                 }
             );
-    }, [breedName]);
+    }, [breedName, setIsLoading]);
 
     return (
         <div className="detailsContainer">
